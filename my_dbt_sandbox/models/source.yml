@@ -1,0 +1,18 @@
+
+version: 2
+
+sources:
+  - name: origem_db
+    schema: dbt_sandbox_origem_db
+    description: "Este source é origem"
+    tables:
+      - name: clientes
+      - name: vendedores
+      - name: produtos
+      - name: vendas
+        loaded_at_field: "CONVERT_TZ (data_venda, '-03:00','+00:00')"
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 365, period: day}
+          filter: "data_venda >= MAKEDATE(year(now()),1)"
+          

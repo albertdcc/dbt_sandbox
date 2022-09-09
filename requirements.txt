@@ -1,0 +1,4 @@
+dbt-mysql==1.0.0
+sqlalchemy==1.4.40
+mysqlclient==2.1.1
+Faker==14.1.0

@@ -1,0 +1,33 @@
+
+version: 2
+
+models:
+  - name: stg_clientes
+    description: "tabela stg"
+    columns:
+      - name: id
+        description: "esta é uma descrição"
+        tests:
+          - unique
+          - not_null
+      - name: nome
+  - name: stg_vendedores
+    description: "tabela stg"
+    columns:
+      - name: matricula
+      - name: nome
+  - name: stg_produtos
+    description: "tabela stg"
+    columns:
+      - name: codigo
+      - name: nome
+      - name: valor
+  - name: stg_vendas
+    description: "tabela stg"
+    columns:
+      - name: id
+      - name: id_cliente
+      - name: matricula_vendedor
+      - name: codigo_produto
+      - name: qtde
+      - name: valor_total

@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: md_vendas
+    description: "tabela master data de vendas"
+    columns:
+      - name: id
+        description: "esta é uma descrição"
+        tests:
+          - unique
+          - not_null
+      - name: nome

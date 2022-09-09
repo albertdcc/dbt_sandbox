@@ -1,0 +1,4 @@
+id_produto,desconto,coluna_string_para_teste
+1,0.15,"Esta é uma string para teste genérico"
+2,0.45,"Esta string fará o teste falhar por causa do caractere + aqui"
+3,0.16,"Esta é uma string para teste genérico"

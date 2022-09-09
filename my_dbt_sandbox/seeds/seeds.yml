@@ -1,0 +1,20 @@
+version: 2
+
+seeds:
+  - name: produtos_desconto
+    description: "# Produtos Desconto \n Aqui é a documentação em Markdown"
+    config:
+      column_types:
+        id_produto: int
+        desconto: double
+    docs:
+      show: true
+    columns:
+      - name: id_produto
+        tests:
+          - unique
+          - sql_injection_prevention
+      - name: desconto
+      - name: coluna_string_para_teste
+        tests:
+          - sql_injection_prevention
